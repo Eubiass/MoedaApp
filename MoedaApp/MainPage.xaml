@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoedaApp.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="30" 
+            Spacing="20" 
+            VerticalOptions="Center">
+
+            <Image x:Name="MoedaImage"
+                   Source="cara.png"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   HorizontalOptions="Center"
+                   Margin="0,10" />
+
+            <Picker x:Name="EscolhaPicker"
+                    Title="Escolha Cara ou Coroa"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    WidthRequest="200">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Cara</x:String>
+                        <x:String>Coroa</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Lançar Moeda!"
+                    Clicked="Button_Clicked"
+                    FontSize="20"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="12"
+                    Padding="10"
+                    HorizontalOptions="Center" />
+
+            <Label x:Name="Resultado"
+                   Text="Resultado aparecerá aqui"
+                   FontSize="22"
+                   TextColor="#333"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="Estatisticas"
+                   Text="Acertos: 0 | Erros: 0"
+                   FontSize="18"
+                   TextColor="#666"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
